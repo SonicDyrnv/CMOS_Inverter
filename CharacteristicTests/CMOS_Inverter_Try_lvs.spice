@@ -1,0 +1,7 @@
+* NGSPICE file created from CMOS_Inverter_Try.ext - technology: sky130A
+
+.subckt CMOS_Inverter_Try Voltage_VCC Voltage_GND Vin_Gate_Location2 Output_Vout
+X0 Output_Vout Vin_Gate_Location2 Voltage_VCC Voltage_VCC sky130_fd_pr__pfet_01v8 ad=0.8383 pd=3.68 as=0.8686 ps=3.74 w=1.01 l=0.57
+X1 Output_Vout Vin_Gate_Location2 Voltage_GND Voltage_GND sky130_fd_pr__nfet_01v8 ad=0.8383 pd=3.68 as=0.8686 ps=3.74 w=1.01 l=0.57
+.ends
+

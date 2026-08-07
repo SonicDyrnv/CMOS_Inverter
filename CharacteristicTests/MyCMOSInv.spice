@@ -1,0 +1,9 @@
+** sch_path: /home/dhruvrathod/Desktop/SideLearn/MyCMOSInv.sch
+.subckt MyCMOSInv Voltage_VCC Vin_Gate_Location2 Voltage_GND Output_Vout
+*.PININFO Voltage_VCC:B Vin_Gate_Location2:B Voltage_GND:B Output_Vout:O
+XM1 Output_Vout Vin_Gate_Location2 Voltage_GND Voltage_GND sky130_fd_pr__nfet_01v8 L=0.57 W=1.01
++ nf=1 m=1
+XM2 Output_Vout Vin_Gate_Location2 Voltage_VCC Voltage_VCC sky130_fd_pr__pfet_01v8 L=0.57 W=1.01
++ nf=1 m=1
+.ends
+.end

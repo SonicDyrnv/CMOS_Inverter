@@ -1,0 +1,22 @@
+.lib "/home/dhruvrathod/EDA/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include "CMOS_Inverter_Try.spice"
+
+.option scale=1u
+
+Vcc Voltage_VCC 0 1.8
+Vgnd Voltage_GND 0 0
+Vin Vin_Gate_Location2 0 0
+
+.control
+
+foreach T -40 0 27 85 125
+    set temp = $T
+    dc Vin 0 1.8 0.005
+end
+
+setplot dc1
+plot v(Output_Vout) dc2.v(Output_Vout) dc3.v(Output_Vout) dc4.v(Output_Vout) dc5.v(Output_Vout)
+
+.endc
+
+.end

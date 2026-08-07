@@ -1,0 +1,20 @@
+* Testbench for extracted Sky130 CMOS Inverter (Transient)
+
+.lib "/home/dhruvrathod/EDA/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include "CMOS_Inverter_Try.spice"
+
+.option scale=1u
+
+Vcc  Voltage_VCC           0  DC 1.8
+Vgnd Voltage_GND           0  DC 0
+
+Vin  Vin_Gate_Location2    0  PULSE(0 1.8 0 100p 100p 10n 20n)
+
+.tran 10p 100n
+
+.control
+run
+plot v(Vin_Gate_Location2) v(Output_Vout)
+.endc
+
+.end

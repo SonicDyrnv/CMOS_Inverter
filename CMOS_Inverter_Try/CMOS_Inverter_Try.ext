@@ -1,0 +1,23 @@
+timestamp 1785838906
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "Output_Vout" 5 224 139 224 139 m2
+port "Vin_Gate_Location2" 4 64 314 64 314 m1
+port "Vin_Gate_Location1" 3 63 -35 63 -35 m1
+port "Voltage_VCC" 1 -228 228 -228 228 m2
+port "Voltage_GND" 2 -228 46 -228 46 m1
+node "Output_Vout" 466 570.203 224 139 m2 0 0 0 0 0 0 0 0 8383 368 8383 368 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10920 604 16400 728 27435 880 0 0 0 0 0 0 0 0
+node "Vin_Gate_Location2" 395 750.806 64 314 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19893 812 0 0 12400 700 19893 812 0 0 0 0 0 0 0 0 0 0
+equiv "Vin_Gate_Location2" "Vin_Gate_Location1"
+node "Voltage_VCC" 2981 1201.18 -228 228 m2 0 0 0 0 50232 1004 0 0 7474 350 8686 374 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10920 604 14308 688 36018 798 0 0 0 0 0 0 0 0
+substrate "Voltage_GND" 489 0 -228 46 m1 0 0 0 0 0 0 0 0 8686 374 7474 350 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10920 604 34224 772 0 0 0 0 0 0 0 0 0 0
+cap "Vin_Gate_Location2" "Output_Vout" 538.343
+cap "Output_Vout" "Voltage_VCC" 95.2078
+cap "Vin_Gate_Location2" "Voltage_VCC" 358.293
+device msubckt sky130_fd_pr__nfet_01v8 35 -5 36 -4 l=57 w=101 "Voltage_GND" "Vin_Gate_Location2" 114 0 "Voltage_GND" 101 8686,374 "Output_Vout" 101 8383,368
+device msubckt sky130_fd_pr__pfet_01v8 35 180 36 181 l=57 w=101 "Voltage_VCC" "Vin_Gate_Location2" 114 0 "Voltage_VCC" 101 8686,374 "Output_Vout" 101 8383,368
