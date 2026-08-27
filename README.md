@@ -1,4 +1,4 @@
-````
+
 # Sky130 CMOS Inverter Design and Characterization
 
 This repository contains the complete design, layout, verification, and characterization of a CMOS Inverter using the **SkyWater 130nm (sky130A)** open-source PDK. The project demonstrates the full analog/mixed-signal ASIC design flow: from schematic entry and layout design to LVS verification, parasitic extraction, and SPICE simulations (DC Transfer, Transient, and Temperature analysis).
